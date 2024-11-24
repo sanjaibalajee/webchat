@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Layout */
+.chat-container {
+  @apply fixed inset-0 flex flex-col bg-gray-100;
+}
+
+.chat-content {
+  @apply flex-1 flex flex-col w-full bg-gradient-to-b from-gray-50 to-gray-100 overflow-hidden;
+}
+
+/* Header Styles */
+.chat-header {
+  @apply bg-gradient-to-r from-indigo-600 via-violet-600 to-purple-600 p-4 flex items-center justify-between shadow-lg;
+}
+
+.header-icon-container {
+  @apply bg-white/10 p-2 rounded-lg shadow-inner;
+}
+
+.header-title {
+  @apply text-white font-bold text-xl tracking-tight;
+}
+
+/* Menu Styles */
+.menu-button {
+  @apply md:hidden p-2 text-white hover:bg-white/20 rounded-full transition-colors duration-200;
+}
+
+.menu-content {
+  @apply flex-col md:flex-row bg-indigo-700/95 md:bg-transparent p-3 md:p-0 rounded-xl md:rounded-none shadow-xl md:shadow-none z-50 backdrop-blur-sm;
+}
+
+.menu-action-button {
+  @apply flex items-center justify-center space-x-2 bg-white/20 hover:bg-white/30 text-white px-4 py-2 rounded-lg shadow-inner transition-all duration-200 hover:scale-105;
+}
+
+/* Messages Container */
+.messages-container {
+  @apply flex-1 overflow-y-auto p-4 md:p-6 space-y-6;
+}
+
+/* Message Styles */
+.message-bubble {
+  @apply flex items-start space-x-3 max-w-[85%] md:max-w-3xl;
+}
+
+.message-icon-container {
+  @apply p-2 rounded-xl shadow-md;
+}
+
+.message-content {
+  @apply relative p-4 rounded-2xl shadow-md transition-all duration-200 hover:shadow-lg;
+}
+
+.message-text {
+  @apply text-base leading-relaxed break-words;
+}
+
+.message-timestamp {
+  @apply text-xs block mt-2;
+}
+
+/* User Message Specific */
+.user-message {
+  @apply bg-gradient-to-br from-indigo-600 to-indigo-700 text-white rounded-tr-none;
+}
+
+.user-icon-container {
+  @apply bg-gradient-to-br from-indigo-100 to-indigo-50;
+}
+
+.user-timestamp {
+  @apply text-indigo-200;
+}
+
+/* Assistant Message Specific */
+.assistant-message {
+  @apply bg-white border-2 border-violet-100 text-gray-800 rounded-tl-none;
+}
+
+.assistant-icon-container {
+  @apply bg-gradient-to-br from-violet-100 to-violet-50;
+}
+
+.assistant-timestamp {
+  @apply text-gray-500;
+}
+
+/* System Message Specific */
+.system-message {
+  @apply bg-gray-200 text-gray-800;
+}
+
+.system-icon-container {
+  @apply bg-gradient-to-br from-gray-100 to-gray-50;
+}
+
+/* Loading Animation */
+.loading-container {
+  @apply flex justify-start;
+}
+
+.loading-bubble {
+  @apply bg-white border-2 border-violet-100 rounded-2xl rounded-tl-none p-4 shadow-md;
+}
+
+.loading-dots {
+  @apply flex items-center space-x-2;
+}
+
+.loading-dot {
+  @apply w-2 h-2 bg-violet-400 rounded-full animate-bounce;
+}
+
+/* Input Area */
+.input-container {
+  @apply p-4 bg-white border-t border-gray-200 shadow-lg backdrop-blur-lg bg-white/80;
+}
+
+.input-wrapper {
+  @apply max-w-6xl mx-auto flex items-center space-x-3;
+}
+
+.chat-input {
+  @apply flex-1 p-3 bg-gray-50 border-2 border-gray-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-base text-gray-800 placeholder-gray-400 transition-all duration-200;
+}
+
+.send-button {
+  @apply bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-700 hover:to-violet-700 text-white p-3 rounded-xl shadow-md transition-all duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:scale-105 hover:shadow-lg;
+}
+
+.runtime-stats {
+  @apply mt-2 text-xs text-gray-600 max-w-6xl mx-auto;
+}
